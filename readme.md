@@ -14,7 +14,8 @@ This is the starting laravel install for the admin task.
 - Edit row - simple validation
 - Delete row - with confirmation
 
-You are free to create routes, controllers, etc.
+You are free to create routes, controllers, etc as you see fit.
+For basic validation please ensure a valid email address and enfore character lengths.
 
 ## Assumptions
 - html/css can be very basic but functional
