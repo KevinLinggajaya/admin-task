@@ -17,7 +17,7 @@
       <div class="table-responsive">
         <table class="table table-striped table-hover">
           <thead>
-          <tr class="{{ env("TBL_HEAD") }}}">
+          <tr class="{{ env("TBL_HEAD") }}">
             <th>Name</th>
             <th>Contact</th>
             <th>Email</th>
