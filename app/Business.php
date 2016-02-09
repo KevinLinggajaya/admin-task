@@ -5,6 +5,23 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * App\Business
+ *
+ * @property integer $id
+ * @property string $name
+ * @property string $contact
+ * @property string $email
+ * @property string $line_1
+ * @property string $line_2
+ * @property string $line_3
+ * @property string $city
+ * @property string $state
+ * @property integer $postcode
+ * @property \Carbon\Carbon $deleted_at
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ */
 class Business extends Model
 {
     use SoftDeletes;

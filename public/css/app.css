@@ -5756,4 +5756,14 @@ body {
   padding: 40px 15px;
   text-align: center; }
 
+.form .has-error small.error {
+  color: #FF4136;
+  font-style: italic; }
+
+.form-delete {
+  display: inline; }
+
+.nowrap {
+  white-space: nowrap; }
+
 /*# sourceMappingURL=app.css.map */

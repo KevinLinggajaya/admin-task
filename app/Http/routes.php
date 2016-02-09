@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('home');
 });
 
+
+Route::group(['middleware' => 'web'], function() {
+    Route::resource('business','BusinessController');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
