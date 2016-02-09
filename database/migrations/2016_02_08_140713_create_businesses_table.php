@@ -27,8 +27,16 @@ class CreateBusinessesTable extends Migration
             $table->string('state', 50);
             $table->smallInteger('postcode');   //4 digits
 
+            $table->softDeletes();
+
             $table->timestamps();
         });
+
+        //Add our default data we will use for testing
+        \App\Business::create(['name' => 'SallySally', 'contact' => 'Sally Test',
+                'email' => 'sally@example.com', 'line_1' => '1 Test St', 'city' => 'Perth',
+                'state' => 'Western Australia', 'postcode' => 6000]);
+
     }
 
     /**
