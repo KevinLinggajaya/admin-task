@@ -41,17 +41,22 @@ class BusinessController extends Controller
      */
     public function store(BusinessRequest $request)
     {
-        $business = new Business();
-        $business->name = $request->name;
-        $business->contact = $request->contact;
-        $business->email = $request->email;
-        $business->line_1 = $request->line_1;
-        $business->line_2 = $request->line_2;
-        $business->line_3 = $request->line_3;
-        $business->city = $request->city;
-        $business->state = $request->state;
-        $business->postcode = $request->postcode;
-        $business->save();
+//        $business = new Business();
+//        $business->name = $request->name;
+//        $business->contact = $request->contact;
+//        $business->email = $request->email;
+//        $business->line_1 = $request->line_1;
+//        $business->line_2 = $request->line_2;
+//        $business->line_3 = $request->line_3;
+//        $business->city = $request->city;
+//        $business->state = $request->state;
+//        $business->postcode = $request->postcode;
+//        $business->save();
+
+        //As long as we have a fillable or guarded setup on the model we can do this
+        $business = Business::create($request->all());
+
+        //Can then check to ensure it was created properly. Probably best to wrap in a try...catch
 
         $request->flash();
         return redirect(action("BusinessController@index"));
@@ -89,16 +94,19 @@ class BusinessController extends Controller
     public function update(BusinessRequest $request, $id)
     {
         $business = Business::findOrFail($id);
-        $business->name = $request->name;
-        $business->contact = $request->contact;
-        $business->email = $request->email;
-        $business->line_1 = $request->line_1;
-        $business->line_2 = $request->line_2;
-        $business->line_3 = $request->line_3;
-        $business->city = $request->city;
-        $business->state = $request->state;
-        $business->postcode = $request->postcode;
-        $business->save();
+//        $business->name = $request->name;
+//        $business->contact = $request->contact;
+//        $business->email = $request->email;
+//        $business->line_1 = $request->line_1;
+//        $business->line_2 = $request->line_2;
+//        $business->line_3 = $request->line_3;
+//        $business->city = $request->city;
+//        $business->state = $request->state;
+//        $business->postcode = $request->postcode;
+//        $business->save();
+
+        //Can do this as well.
+        $business->update($request->all());
 
         $request->flash();
         return redirect(action("BusinessController@index"));    }
